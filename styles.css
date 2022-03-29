@@ -282,11 +282,12 @@ main{
 }
 
 .banner__icon-fire{
-    height: 100%;
+    /* height: 100%;
     position: absolute;
+    top: 50px;
     right: 10px;
     overflow: hidden;
-}
+} */
 
 #icon_fire{
     width: 300px;
