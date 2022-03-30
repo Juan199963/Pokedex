@@ -6,7 +6,7 @@ const pokeId = document.querySelector('[data-poke-id]');
 const pokeTypes = document.querySelector('[data-poke-types]');
 const pokeStats = document.querySelector('[data-poke-stats]');
 
-/*const typeColors = {
+const typeColors = {
     electric: '#FFEA70',
     normal: '#B09398',
     fire: '#FF675C',
@@ -86,4 +86,4 @@ window.onscroll = function () {
     var elemento2 = document.getElementById("icon_fire");
     elemento1.style.bottom = posicion * 0.1 + "px";
     elemento2.style.top = posicion * 0.1 + "px";
-}*/
+}
