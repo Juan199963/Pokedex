@@ -6,7 +6,7 @@ const pokeId = document.querySelector('[data-poke-id]');
 const pokeTypes = document.querySelector('[data-poke-types]');
 const pokeStats = document.querySelector('[data-poke-stats]');
 
-const typeColors = {
+/*const typeColors = {
     electric: '#FFEA70',
     normal: '#B09398',
     fire: '#FF675C',
