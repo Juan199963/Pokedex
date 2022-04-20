@@ -5,6 +5,9 @@ const pokeImgContainer = document.querySelector('[data-poke-img-container]');
 const pokeId = document.querySelector('[data-poke-id]');
 const pokeTypes = document.querySelector('[data-poke-types]');
 const pokeStats = document.querySelector('[data-poke-stats]');
+const pokeabis = document.querySelector('[data-poke-abi]')
+const pokeImg2 = document.querySelector('[data-poke-img2]');
+const pokeImg3 = document.querySelector('[data-poke-img3]');
 
 const typeColors = {
     electric: '#FFEA70',
@@ -28,7 +31,8 @@ const typeColors = {
 
 const renderPokemonData = data =>{
     const sprite = data.sprites.front_default;
-    const{ stats,types } = data;
+    const sprite2 = data.sprites.back_default;
+    const{ stats,types,abilities } = data;
     
     pokeName.textContent = data.name;
     pokeImg.setAttribute('src', sprite);
@@ -36,6 +40,10 @@ const renderPokemonData = data =>{
     setCardColor(types);
     renderPokemonTypes(types);
     renderPokemonStats(stats);
+    renderPokemonAbbilities(abilities);
+    pokeImg2.setAttribute('src', sprite2);
+    pokeImg3.setAttribute('src', data.sprites.front_shiny)
+    console.log(data)
 }
 
 const searchPokemon = event =>{
@@ -80,6 +88,15 @@ const renderPokemonStats = stats =>{
     })
 }
 
+const renderPokemonAbbilities = abilities =>{
+    pokeabis.innerHTML = '';
+    abilities.forEach(ability=>{
+        const abilityTextElement = document.createElement("div");
+        abilityTextElement.textContent = ability.ability.name;
+        pokeabis.appendChild(abilityTextElement);
+    })
+}
+
 window.onscroll = function () {
     var posicion = window.pageYOffset || document.documentElement.scrollTop;
     var elemento1 = document.getElementById("icon_heart");
@@ -87,3 +104,5 @@ window.onscroll = function () {
     elemento1.style.bottom = posicion * 0.1 + "px";
     elemento2.style.top = posicion * 0.1 + "px";
 }
+
+

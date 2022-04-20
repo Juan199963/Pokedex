@@ -11,21 +11,21 @@
     <title>Pokedex</title>
     <script src="script.js" type = "text/javascript" defer></script>
     <link href="styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <audio autoplay="" controls="" loop="" preload="none"></audio>
-    <source src="D:\DEVF.CLASES\MODULO_5_JS_AVANZADO\Creacion de Pokedex\media\Pokemon_Theme_song.mp3" type="audio/mp3">
+    
     <header>
 
         <div class="container__header">	
 
             <div class="logo">
-                <img src="https://pngimg.com/uploads/pokeball/pokeball_PNG24.png" alt="">
-            </div>
-            <div class="logopoke">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png" alt="">
             </div>
+        
             
             <i class="fa-solid fa-bars" id="icon_menu"></i>
             
@@ -57,16 +57,38 @@
             <input type="text" name="pokemon" autocomplete="off" class="input-file">
         
         </form>
-    
-        <div data-poke-card class="poke-card">
-            <div data-poke-name>Pokedex</div>
-            <div data-poke-img-container class="img-container">
-                <img data-poke-img class="poke-img" src="./poke-reg.png"/>
+        <div id="contenedor_poke">
+            <div data-poke-card class="poke-card">
+                <div data-poke-name>Pokedex</div>
+                <div data-poke-img-container class="img-container">
+                    <img data-poke-img class="poke-img" src="./poke-reg.png"/>
+                </div>
+                <div data-poke-id></div>
+                <div data-poke-types class="poke-types"></div>
+                <div data-poke-stats class="poke-stats"></div>
             </div>
-            <div data-poke-id></div>
-            <div data-poke-types class="poke-types"></div>
-            <div data-poke-stats class="poke-stats"></div>
+            <div data-poke-card class="poke-card">
+
+                
+                <div data-poke-name>Habilidades</div>
+                <div data-poke-img-container class="img-container">
+                    <img data-poke-img2 class="poke-img" src="./poke-reg.png"/>
+                </div>
+                <div data-poke-id></div>
+                <div data-poke-types class="poke-types"></div>
+                <div data-poke-abi class="poke-stats"></div>
+            </div>
+            <div data-poke-card class="poke-card">
+                <div data-poke-name>Pokemon Shiny</div>
+                <div data-poke-img-container class="img-container">
+                    <img data-poke-img3 class="poke-img" src="./poke-reg.png"/>
+                </div>
+                <div data-poke-id></div>
+                <div data-poke-types class="poke-types"></div>
+                <div data-poke-stats class="poke-stats"></div>
+            </div>
         </div>
+        
     </div>
     <div class="container__banner">
 
@@ -78,14 +100,18 @@
                 <img src="https://lh3.googleusercontent.com/9FHOk79iiGEisBJxkU9smRi8CUKagEkt_yl7T7z9mEBHypSg5sblsGkv1YOxj-4vCpVbYUeo7dC6q2rxiHn9fNlcBxXGabLd7RpsNC6MHrwCRw=e365-w567" id="icon_fire" alt="">
             </div>
             <div class="banner__text">
-                <h2>La pila moderna de inteligencia de datos en la nube para su negocio de misión crítica.</h2>
+                <h2>Si deseas consultar puedes conectarte a una API, en este caso nos conectamos a la API de POKEAPI</h2>
                 <a href="#">Leer más</a>
             </div>
         </div>
         
 
     </div>
-    
-    
+    <div id="audio_data">
+        <td height="1" colspan="0" valign="" class="bb">
+            <audio src="Pokemon_Theme_song.ogg" autoplay loop ></audio>
+        </td>
+    </div>
+       
 </body>
 </html>
